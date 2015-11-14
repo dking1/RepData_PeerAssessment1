@@ -1,9 +1,6 @@
----
-output: html_document
----
 #Peer Assessment 1
 ##Loading and preprocessing the data
-Download dataset (https://d396qusza40orc.cloudfront.net/repdata%2Fdata%2Factivity.zip) and place it in the working directory.  Open applicable libraries.
+##Download dataset (https://d396qusza40orc.cloudfront.net/repdata%2Fdata%2Factivity.zip) and place it in the working directory.  Open applicable libraries.
 
 ```r
 library(knitr)
@@ -44,7 +41,7 @@ Create histogram of total number of steps taken each day.
 hist(SumOfSteps$totalsteps, col="lightblue", main="Total Number of Steps Taken Each Day", xlab="Total Number of Steps", ylab="Number of Days", breaks=10)
 ```
 
-![plot of chunk unnamed-chunk-4](figure/unnamed-chunk-4-1.png) 
+![](PA1_files/figure-html/unnamed-chunk-4-1.png) 
 
 Calculate the mean of the number of steps taken each day.
 
@@ -90,7 +87,7 @@ Create a line graph of the average number of steps over interval.
 plot(MeanOfIntervals$interval, MeanOfIntervals$totalsteps, type="l", main="Average Number Of Steps Over Interval", xlab="Interval", ylab="Average Number of Steps")
 ```
 
-![plot of chunk unnamed-chunk-9](figure/unnamed-chunk-9-1.png) 
+![](PA1_files/figure-html/unnamed-chunk-9-1.png) 
 
 Produce a summary to find the maximum value in steps.
 
@@ -160,7 +157,7 @@ Create a histogram showing the new data with the NA's replaced in the data.
 hist(SumOfSteps2$totalsteps2, col="red", main="NAs Replaced Total Number of Steps Taken Each Day", xlab="Total Number of Steps", ylab="Number of Days", breaks=10)
 ```
 
-![plot of chunk unnamed-chunk-16](figure/unnamed-chunk-16-1.png) 
+![](PA1_files/figure-html/unnamed-chunk-16-1.png) 
 
 Calculate the mean of the number of steps taken each day.
 
@@ -250,6 +247,6 @@ library(ggplot2)
 qplot(interval, steps, data = DataOrdered, type = 'l', geom=c("line"),xlab = "Interval", ylab = "Number of steps", main = "Weekday and Weekend Number of Steps during Intervals") +facet_wrap(~ dayType, ncol = 1)
 ```
 
-![plot of chunk unnamed-chunk-24](figure/unnamed-chunk-24-1.png) 
+![](PA1_files/figure-html/unnamed-chunk-24-1.png) 
 
 During the weekday activity seems to pick on average earlier then on the weekend.  During the weekday there is one large peak and on the weekend activity seems to be sporadic and throughout the whole day.
